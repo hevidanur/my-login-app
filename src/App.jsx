@@ -6,6 +6,7 @@ import Slider from "react-slick"; // react-slick'i ekliyoruz
 
 import { AppBar, Box, Button, Card, CardContent, IconButton, Toolbar, Typography } from "@mui/material";
 import { useState } from "react";
+import { pink } from '@mui/material/colors';
 
 function App() {
     const settings = {
@@ -111,7 +112,65 @@ function App() {
                     </CardContent>
                 </Card>
             </Box>
+
+
+
+            <Card>
+                <CardContent sx={{ height: "30%", width: "30%", alignItems: "center", backgroundColor: "deeppink" }}>
+                    <h3 style={{ backgroundColor: "pink", padding: "20%", textAlign: "center"}}>img 1</h3>
+                    <img src="/img1.jpg" style={{
+                        backgroundColor: "#fce4ec",
+                        width: "220px", height: "210px", borderRadius: "10px", padding: "20%",
+                        overflow: "visible", display: "flex",
+                        alignItems: "center"
+                    }} />
+                </CardContent>
+            </Card>
+
+<br></br>
+
+            <Card>
+                <CardContent sx={{ height: "30%", width: "30%", alignItems: "center", backgroundColor: "deeppink" }}>
+                    <h3 style={{ backgroundColor: "pink", padding: "20%", textAlign: "center"}}>img 2</h3>
+                    <img src="/tavsan.jpg" style={{
+                        backgroundColor: "#fce4ec",
+                        width: "220px", height: "210px", borderRadius: "10px", padding: "20%",
+                        overflow: "visible", display: "flex",
+                        alignItems: "center"
+                    }} />
+                </CardContent>
+            </Card>
+
+
+            <br></br>
+
+            <Card>
+                <CardContent sx={{ height: "30%", width: "30%", alignItems: "center", backgroundColor: "deeppink" }}>
+                    <h3 style={{ backgroundColor: "pink", padding: "20%", textAlign: "center"}}>img 3</h3>
+                    <img src="/hevidapr.png" style={{
+                        backgroundColor: "#fce4ec",
+                        width: "220px", height: "210px", borderRadius: "10px", padding: "20%",
+                        overflow: "visible", display: "flex",
+                        alignItems: "center"
+                    }} />
+                </CardContent>
+            </Card>
+
+<br></br>
+
+            <Card>
+                <CardContent sx={{ height: "30%", width: "30%", alignItems: "center", backgroundColor: "deeppink" }}>
+                    <h3 style={{ backgroundColor: "pink", padding: "20%", textAlign: "center"}}>img 4</h3>
+                    <img src="/img2.jpg" style={{
+                        backgroundColor: "#fce4ec",
+                        width: "220px", height: "210px", borderRadius: "10px", padding: "20%",
+                        overflow: "visible", display: "flex",
+                        alignItems: "center"
+                    }} />
+                </CardContent>
+            </Card>
         </Box>
+
     );
 }
 
