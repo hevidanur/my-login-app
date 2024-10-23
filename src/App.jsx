@@ -13,7 +13,7 @@ function App() {
         infinite: true, // Sonsuz döngü
         speed: 500, // Geçiş hızı
         slidesToShow: 1, // Aynı anda gösterilecek slayt sayısı
-        slidesToScroll: 1 // Kaydırma başına kaç slayt kayacak
+        slidesToScroll: 1 // Kaydırma başına kaç slayt kayacak test
     };
 
     const [isSpan, setIsSpan] = useState(false); // Başlangıçta false
