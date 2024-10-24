@@ -36,3 +36,44 @@
     transform: rotate(360deg);
   }
 }
+
+.MuiCardContent-root {
+  display: flex;
+  justify-content: space-between; /*Bir content içerisindeki nesnelerin yan yana düzenli yerleşmesi*/
+  border-radius: 5px;
+  /*flex-wrap: wrap; alt alta gözükmesi için*/
+}
+
+.MuiCard-root	{
+  display: flex;
+  justify-content: center;
+  box-shadow: none !important;
+}
+
+a{
+  text-decoration:none
+}
+
+#h3style {
+  width: 40%;
+  height: 40%;
+  background-color: pink;
+  padding: 5px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+#hebidaImgStyle {
+  background-color: #fce4ec;
+  width: 40%; 
+  height: 40%;
+  border-radius: 10px;
+  padding: 5px;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+}
+#aetiketi{
+  width: 800%;
+
+}

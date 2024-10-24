@@ -4,9 +4,12 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick"; // react-slick'i ekliyoruz
 
+
+
 import { AppBar, Box, Button, Card, CardContent, IconButton, Toolbar, Typography } from "@mui/material";
 import { useState } from "react";
 import { pink } from '@mui/material/colors';
+
 
 function App() {
     const settings = {
@@ -25,7 +28,7 @@ function App() {
 
     return (
         <Box>
-            <AppBar position="static" sx={{ backgroundColor: "white", color: "deeppink" }}>
+            <AppBar position="static" sx={{ backgroundColor: "white", color: "deeppink", margin: "1%" }}>
                 <Toolbar>
                     <IconButton
                         size="large"
@@ -38,10 +41,23 @@ function App() {
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                         Hevida Nur Uludağ
                     </Typography>
-                    <Button sx={{ color: "deeppink" }}>Ana Sayfa</Button>
-                    <Button sx={{ color: "deeppink" }}>Hakkında</Button>
-                    <Button sx={{ color: "deeppink" }}>Galeri</Button>
-                    <Button sx={{ color: "deeppink" }}>İletişim</Button>
+                    <div style={{ borderRadius: "5px", margin: "1%", color: "deeppink" }}>
+                        <a href="#anasayfa">Ana Sayfa</a>
+                    </div>
+
+                    <div style={{ borderRadius: "5px", margin: "1%", color: "deeppink" }}>
+                        <a href="#hakkımda" sx={{ color: "deeppink" }}>Hakkımda</a>
+                    </div>
+
+                    <div style={{ borderRadius: "5px", margin: "1%", color: "deeppink" }}>
+                        <a href="#galeri" sx={{ color: "deeppink" }}>Galeri</a>
+                    </div>
+
+                    <div style={{ borderRadius: "5px", margin: "1%", color: "deeppink" }}>
+                        <a href="#anasayfa" sx={{ color: "deeppink" }}>iletişim</a>
+                    </div>
+
+                    <a href="#hebidayagit">Hebida</a>
                 </Toolbar>
             </AppBar>
             <Box sx={{
@@ -55,12 +71,15 @@ function App() {
                 justifyContent: "center"
             }}><span>Hevida Nur Uludağ</span></Box>
             <Box sx={{ width: "90%", margin: "0 auto", marginTop: "20px" }}>
-                <Slider {...settings}>
+                <Slider {...settings} id="anasayfa">
                     <div>
-                        <img src="/slider1.jpg" alt="Slide 1" style={{ width: "100%", height: "400px" }} />
+                        <img src="/slider1.jpg" alt="Slide 1" style={{ width: "100%", height: "500px" }} />
                     </div>
                     <div>
-                        <img src="/slider2.jpeg" alt="Slide 2" style={{ width: "100%", height: "400px" }} />
+                        <img src="/slider2.jpeg" alt="Slide 2" style={{ width: "100%", height: "500px" }} />
+                    </div>
+                    <div>
+                        <img src="/slider3.jpg" alt="Slide 3" style={{ width: "100%", height: "500px" }} />
                     </div>
                 </Slider>
             </Box>
@@ -92,7 +111,7 @@ function App() {
                     }}>
                         <img src="/hevidapr.png" style={{ width: "100%", height: "100%", borderRadius: "10px" }} />
                     </CardContent>
-                    <CardContent sx={{ height: "70%", width: "70%" }}>
+                    <CardContent id="hakkımda" sx={{ height: "70%", width: "70%" }}>
                         <Box>
                             <h1>Hakkımda</h1>
                             <span>
@@ -115,63 +134,50 @@ function App() {
 
 
 
-            <Card>
+            <Card id="galeri">
                 <CardContent sx={{ height: "30%", width: "30%", alignItems: "center", backgroundColor: "deeppink" }}>
-                    <h3 style={{ backgroundColor: "pink", padding: "20%", textAlign: "center"}}>img 1</h3>
-                    <img src="/img1.jpg" style={{
-                        backgroundColor: "#fce4ec",
-                        width: "220px", height: "210px", borderRadius: "10px", padding: "20%",
-                        overflow: "visible", display: "flex",
-                        alignItems: "center"
-                    }} />
+                    <h3 id="h3style">img 1</h3>
+                    <img src="/img1.jpg" id="hebidaImgStyle" />
                 </CardContent>
             </Card>
 
-<br></br>
+            <br></br>
 
             <Card>
                 <CardContent sx={{ height: "30%", width: "30%", alignItems: "center", backgroundColor: "deeppink" }}>
-                    <h3 style={{ backgroundColor: "pink", padding: "20%", textAlign: "center"}}>img 2</h3>
-                    <img src="/tavsan.jpg" style={{
-                        backgroundColor: "#fce4ec",
-                        width: "220px", height: "210px", borderRadius: "10px", padding: "20%",
-                        overflow: "visible", display: "flex",
-                        alignItems: "center"
-                    }} />
+                    <h3 id="h3style">img 2</h3>
+                    <img src="/tavsan.jpg" id="hebidaImgStyle" />
                 </CardContent>
             </Card>
 
 
             <br></br>
 
-            <Card>
+            <Card id="hebidayagit">
                 <CardContent sx={{ height: "30%", width: "30%", alignItems: "center", backgroundColor: "deeppink" }}>
-                    <h3 style={{ backgroundColor: "pink", padding: "20%", textAlign: "center"}}>img 3</h3>
-                    <img src="/hevidapr.png" style={{
-                        backgroundColor: "#fce4ec",
-                        width: "220px", height: "210px", borderRadius: "10px", padding: "20%",
-                        overflow: "visible", display: "flex",
-                        alignItems: "center"
-                    }} />
+                    <h3 id="h3style">img 3</h3>
+                    <img src="/img3.jpg" id="hebidaImgStyle" />
                 </CardContent>
             </Card>
 
-<br></br>
-
-            <Card>
+            <br></br>
+            <Card id="hebidayagit">
                 <CardContent sx={{ height: "30%", width: "30%", alignItems: "center", backgroundColor: "deeppink" }}>
-                    <h3 style={{ backgroundColor: "pink", padding: "20%", textAlign: "center"}}>img 4</h3>
-                    <img src="/img2.jpg" style={{
-                        backgroundColor: "#fce4ec",
-                        width: "220px", height: "210px", borderRadius: "10px", padding: "20%",
-                        overflow: "visible", display: "flex",
-                        alignItems: "center"
-                    }} />
+                    <h3 id="h3style">img 3</h3>
+                    <img src="/img2.jpg" id="hebidaImgStyle" />
                 </CardContent>
             </Card>
+
+            <footer>
+                <div style={{ backgroundColor: "pink", height: "90px" }}>
+
+                        <a id={"aetiketi"} href="https://www.instagram.com/hevidanur_uludag/">Instagram</a>
+
+                </div>
+            </footer>
+
         </Box>
-
-    );
+  );
 }
 
 export default App;
