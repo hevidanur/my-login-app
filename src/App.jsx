@@ -3,10 +3,9 @@ import './App.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick"; // react-slick'i ekliyoruz
-
-
-
-import { AppBar, Box, Button, Card, CardContent, IconButton, Toolbar, Typography } from "@mui/material";
+import { FaWhatsapp } from "react-icons/fa";
+import { BsInstagram } from "react-icons/bs";
+import {AppBar, Box, Button, Card, CardContent, IconButton, textFieldClasses, Toolbar, Typography} from "@mui/material";
 import { useState } from "react";
 import { pink } from '@mui/material/colors';
 
@@ -111,22 +110,12 @@ function App() {
                     }}>
                         <img src="/hevidapr.png" style={{ width: "100%", height: "100%", borderRadius: "10px" }} />
                     </CardContent>
-                    <CardContent id="hakkımda" sx={{ height: "70%", width: "70%" }}>
+                    <CardContent id="hakkımda" sx={{ height: "90%", width: "70%" }}>
                         <Box>
-                            <h1>Hakkımda</h1>
-                            <span>
+                            <h1 style={{Color:"red"}}>Hakkımda</h1>
+                            <h6 id={"haltı"}>
                                 Merhaba! Ben Hevida, JavaScript alanında uzmanlaşmak isteyen bir blog yazarıyım. Bu blogda, hem yazılım hem de kendi yaşantım hakkında yazılar paylaşacağım.
-                            </span>
-                        </Box>
-                        <Box sx={{ marginTop: "20px" }}>
-                            <Button onClick={changeSpan} sx={{ color: "deeppink" }}>
-                                {isSpan ? 'Gizle' : 'Daha fazla oku'}
-                            </Button>
-                            {isSpan && (
-                                <Box sx={{ marginTop: "10px" }}>
-                                    <span>Ek Bilgiler: Burada daha fazla bilgi yer alacak.</span>
-                                </Box>
-                            )}
+                        </h6>
                         </Box>
                     </CardContent>
                 </Card>
@@ -169,15 +158,28 @@ function App() {
             </Card>
 
             <footer>
-                <div style={{ backgroundColor: "pink", height: "90px" }}>
 
-                        <a id={"aetiketi"} href="https://www.instagram.com/hevidanur_uludag/">Instagram</a>
+                <Box sx={{ marginTop: "20px" }}>
+                    {isSpan && (
+                        <Box sx={{marginTop: "10px"}}>
+                            <a id={"aetiketi"} href="https://www.instagram.com/hevidanur_uludag/">
+                                <BsInstagram style={{marginRight: "8px"}}/>Instagram</a>
 
-                </div>
+                            <a id={"aetiketi2"}
+                               href="https://www.google.com/search?q=whatsapp&rlz=1C1GCEU_trTR1129TR1129&oq=whatsapp&gs_lcrp=EgZjaHJvbWUyDwgAEEUYORiDARixAxiABDIMCAEQIxgnGIAEGIoFMg0IAhAAGIMBGLEDGIAEMgoIAxAAGLEDGIAEMg0IBBAAGIMBGLEDGIAEMg0IBRAAGIMBGLEDGIAEMgYIBhBFGDwyBggHEAUYQNIBCDI3NTFqMGo3qAIIsAIB&sourceid=chrome&ie=UTF-8">
+                                <FaWhatsapp style={{marginRight: "8px"}}/>Whatsapp</a>
+                        </Box>
+                    )}
+                    <Button onClick={changeSpan} sx={{ color: "deeppink" }}>
+                        {isSpan ? 'Gizle' : 'Daha fazla oku'}
+                    </Button>
+                </Box>
+
+
             </footer>
 
         </Box>
-  );
+    );
 }
 
 export default App;

@@ -74,6 +74,25 @@ a{
   align-items: center;
 }
 #aetiketi{
-  width: 800%;
-
+ padding: 0.30%;
+  background-color: pink;
+  display: flex;
+  alignItems: center;
+  font-size: 150%;
+  color: black;
+}
+#aetiketi2{
+  padding: 0.30%;
+  background-color: pink;
+  display: flex;
+  alignItems: center;
+  font-size: 150%;
+  color: black;
+}
+footer {
+  display: flex; /* Flexbox ile yan yana hizalama sağlar */
+  align-items: center; /* Dikeyde ortalamak için */
+}
+#haltı{
+  font-size: 180%;
 }
