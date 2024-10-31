@@ -1,26 +1,21 @@
-import logo from './logo.svg';
+// App.js
+import React from 'react';
+import Balloon from './Balloon';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const colors = ['#FFD1DC', '#C5E1A5', '#B39DDB', '#80DEEA', '#FFCC80'];
+  const balloons = Array.from({ length: 15 }).map((_, index) => (
+      <Balloon
+          key={index}
+          left={Math.random() * 100}
+          delay={-Math.random() * 20}
+          color={colors[Math.floor(Math.random() * colors.length)]}
+      />
+  ));
+
+  return <div className="App">{balloons}</div>;
 }
 
 export default App;
