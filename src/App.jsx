@@ -10,6 +10,8 @@ import { useState } from "react";
 /*import { pink } from '@mui/material/colors';*/
 import { FaGithub } from "react-icons/fa";
 import './Ballon.css';
+import login1 from "./loginsayfasi/login1";
+
 
 /*function HebidaApp() {
     const images = [
@@ -46,16 +48,13 @@ function HebidaApp() {
 
     return (
         <Box>
-            <AppBar position="static" sx={{ backgroundColor: "white", color: "deeppink" }}>
+            <AppBar position="static" sx={{ backgroundColor: {
+                    xs: "white",   // Telefon (en küçük boyut)
+                    sm: "white", // Tablet boyutu
+                    md: "white" // Daha büyük ekranlar
+                }, color: "deeppink"   }}>
                 <Toolbar>
-                    <IconButton
-                        size="large"
-                        edge="start"
-                        color="inherit"
-                        aria-label="menu"
-                        sx={{ mr: 2 }}
-                    >
-                    </IconButton>
+
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                         Hevida Nur Uludağ
                     </Typography>
@@ -109,7 +108,8 @@ function HebidaApp() {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                paddingY:"30px"
+                paddingY:"30px",
+
 
             }}>
                 <Card sx={{
@@ -125,19 +125,23 @@ function HebidaApp() {
                 }}>
                     <CardContent sx={{
                         backgroundColor: "deeppink",
-                        marginLeft: "-70px",
+                        marginLeft:{xs:"0",sm:"0",md:"-70px"} ,
                         width: "20%",
-                        height: "70%",
-                        borderRadius: "10px"
+                        height: {xs:"40%", sm:"40%", md:"70%"},
+                        borderRadius: "10px",
+
                     }}>
                         <img src="/img/hevidapr.png" alt={""} style={{ width: "100%", height: "100%", borderRadius: "10px" }} />
                     </CardContent>
                     <CardContent id="hakkımda" sx={{ height: "90%", width: "70%" }}>
                         <Box>
                             <h1 style={{Color:"red"}}>Hakkımda</h1>
-                            <h4 id={"haltı"}>
-                                Merhaba! Ben Hevida, JavaScript, daha sonrasında TypeScripthayırrrreeeeeetttnoooooye alanında uzmanlaşmak isteyen bir blog yazarıyım. Bu blogda, hem yazılım hem de kendi yaşantım hakkında yazılar paylaşacağım.
-                        </h4>
+
+                            <span id={"haltı"} style={{xs:"10%",sm:"30%",md:"150%"}} >
+                                Merhaba! Ben Hevida, JavaScript, daha sonrasında TypeScript alanında uzmanlaşmak isteyen bir blog yazarıyım.
+                                Bu blogda, hem yazılım hem de kendi yaşantım hakkında yazılar paylaşacağım.
+                        </span>
+
                         </Box>
                     </CardContent>
                 </Card>
@@ -157,7 +161,7 @@ function HebidaApp() {
             <Card>
                 <CardContent sx={{ height: "30%", width: "30%", alignItems: "center", backgroundColor: "deeppink" }}>
                     <h3 id="h3style">img 2</h3>
-                    <img src="/img/tavsan.jpg"alt={""} id="hebidaImgStyle" />
+                    <img src="/img/tavsan.jpg" alt={""} id="hebidaImgStyle" />
                 </CardContent>
             </Card>
 
@@ -201,7 +205,7 @@ function HebidaApp() {
 
                         </Box>
                     )}
-                    <Button id={"buttonhover1"} onClick={changeSpan} sx={{color: "deeppink",fontSize:"150%"}}>
+                    <Button id={"buttonhover1"} onClick={changeSpan} sx={{color: "deeppink",xs:"10%",sm:"120%",md:"150%"}}>
                         {isSpan ? 'Gizle' : 'Bizimle iletişime geçin'}
                     </Button>
                 </Box>
