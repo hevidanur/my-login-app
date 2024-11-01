@@ -77,15 +77,22 @@ a{
  padding: 0.30%;
   background-color: pink;
   display: flex;
+<<<<<<< HEAD
   align-items: center;
   font-size: 150%;
   color: black;
 
+=======
+  alignItems: center;
+  font-size: 150%;
+  color: black;
+>>>>>>> 0ed444c4c3003b1c97dcf4005dda2343994d5d40
 }
 #aetiketi2{
   padding: 0.30%;
   background-color: pink;
   display: flex;
+<<<<<<< HEAD
   align-items: center;
   font-size: 150%;
   color: black;
@@ -103,11 +110,18 @@ a{
 
 }
 
+=======
+  alignItems: center;
+  font-size: 150%;
+  color: black;
+}
+>>>>>>> 0ed444c4c3003b1c97dcf4005dda2343994d5d40
 footer {
   display: flex; /* Flexbox ile yan yana hizalama sağlar */
   align-items: center; /* Dikeyde ortalamak için */
 }
 #haltı{
+<<<<<<< HEAD
 
 }
 
@@ -192,3 +206,7 @@ grid-template-areas:
   background-color: #f8bbd0; /* Pastel pembe arka plan */
   overflow: hidden;
 }
+=======
+  font-size: 180%;
+}
+>>>>>>> 0ed444c4c3003b1c97dcf4005dda2343994d5d40
