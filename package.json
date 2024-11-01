@@ -43,15 +43,14 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-<<<<<<< HEAD
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "html-loader": "^5.1.0",
-    "html-webpack-plugin": "^5.6.3",
-    "react-router-dom": "^6.27.0"
-=======
-    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.15",
-    "react-refresh": "^0.14.2"
->>>>>>> 0ed444c4c3003b1c97dcf4005dda2343994d5d40
+
+    "devDependencies": {
+      "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+      "html-loader": "^5.1.0",
+      "html-webpack-plugin": "^5.6.3",
+      "react-router-dom": "^6.27.0",
+      "@pmmmwh/react-refresh-webpack-plugin": "^0.5.15",
+      "react-refresh": "^0.14.2"
+    }
+
   }
-}
